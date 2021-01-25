@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" type="image/x-con" href="src/img/icon3.ico">
+    <!-- Including HTMLs with JQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script> 
+        $(function(){
+            $("#links").load("src/templates/src.html"); 
+        });
+        $(function(){
+            $("#footer").load("src/templates/footer.html"); 
+        });
+        $(function(){
+            $("#header").load("src/templates/header.html"); 
+        });
+    </script> 
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/car.css">
+    <div id="links"></div>
+</head>
+<body>
+
+
+    <div class="container-fluid mt-5">
+        <header id="header"></header>
+
+        <main>
+            <div class="container mx-auto row intro py-5 justify-content-around">
+                <div class="intro__car col-lg-6">
+                    <img class="img-fluid" src="src/img/img_car.png">
+                </div>
+                <div class="intro__text col-lg-6">
+                    <h1 class="font-weight-bold">Our Testimonials</h1>
+                    <p class="mt-4 ml-5"><i class="fas fa-quote-right mr-3"></i>Went beyond helping me with changes and service. Katie was
+                        excellent with explaining how things worked and showing me
+                        everything all truck had to offer. Would diffidently use again
+                        and recommend to anyone shopping for new car.</p>
+                    <p><span>Charles M. Worsham</span> Toyota C-HR Eclipse</p>
+                </div>
+            </div>
+
+            <div class="row search justify-content-center flex-column flex-lg-row align-items-center py-4">
+                <i class="fas fa-car fa-3x" style="color: #DD3D53;"></i>
+                <div class="search__text ml-3">
+                    <h4 class="font-weight-bold mt-1">Car Search</h4>
+                    <p class="font-weigth-bold">Find your next car</p>
+                </div>
+                <form action="#" class="form-inline">
+                    <select class="form-control ml-3 mr-lg-0 mr-3">
+                        <option selected disabled class="select-option-remove">CHOOSE</option>
+                        <option value="">NEW</option>
+                        <option value="">CERTIFIED</option>
+                        <option value="">USED</option>
+                        <option value="">SOLD OUT</option>
+                    </select>
+                    <select class="form-control ml-3 mr-lg-0 mr-3">
+                        <option selected disabled class="select-option-remove">Year</option>
+                        <option value="">2009</option>
+                        <option value="">2014</option>
+                        <option value="">2015</option>
+                        <option value="">2016</option>
+                        <option value="">2017</option>
+                        <option value="">2018</option>
+                    </select>
+                    <select class="form-control ml-3 mr-lg-0 mr-3">
+                        <option selected disabled class="select-option-remove">Select a Make</option>
+                        <option value="">Dossan</option>
+                        <option value="">Jeex</option>
+                        <option value="">KOA</option>
+                        <option value="">Levro</option>
+                        <option value="">Noex</option>
+                        <option value="">Porsberg</option>
+                        <option value="">WMB</option>
+                        <option value="">Seretta</option>
+                        <option value="">Winger</option>
+                    </select>
+                    <select class="form-control ml-3 mr-lg-0 mr-3">
+                        <option selected disabled class="select-option-remove">Select a Model</option>
+                        <option value="">NEW</option>
+                        <option value="">CERTIFIED</option>
+                        <option value="">USED</option>
+                        <option value="">SOLD OUT</option>
+                    </select>
+                    <select class="form-control ml-3 mr-lg-0 mr-3">
+                        <option selected disabled class="select-option-remove">Price</option>
+                        <option value="">NEW</option>
+                        <option value="">CERTIFIED</option>
+                        <option value="">USED</option>
+                        <option value="">SOLD OUT</option>
+                    </select>
+                    <button class="btn btn-danger ml-3"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+    <div class="container text-center py-4">
+        <div class="col-sm-6 offset-sm-3">
+            <h3 class="py-3"><b>Want to quickly sell your car online?<br>Upload the photos!</b></h3>
+            <button type="button" class="btn-add-item btn btn-danger" data-toggle="modal" data-target="#addItemModal"><b>ADD YOUR ITEM</b></button>
+
+
+            <div class="modal fade" id="addItemModal" tabindex="-1" role="dialog" aria-labelledby="addItemModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addItemModalLabel">UPLOAD YOUR CAR PHOTOS</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal"><b>CANCEL</b></button>
+                            <button type="button" class="btn btn-danger"><b>ADD</b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- TODO Modal Window -->
+    <hr>
+
+    <div class="w-100 mt-4">
+        <div class="row my-2 col-sm-6 offset-sm-3 text-center">
+            <h3 class="mx-auto"><b>Types of Vehicle</b></h3>
+        </div>
+        <ul class="types_vehicles p-0 m-0 d-flex w-100 justify-content-around">
+            <li style="background-image: url(https://smartdata.tonytemplates.com/caleader/wp-content/uploads/2018/10/media02-img-08.jpg);">
+                <a href="#" class="w-100 row justify-content-center mt-2">
+                    <h5>Minivan</h5>
+                    <button class="btn btn-sm btn-danger ml-2">2 offers</button>
+                </a>
+            </li>
+            <li style="background-image: url(https://smartdata.tonytemplates.com/caleader/wp-content/uploads/2018/10/media02-img-02.jpg);">
+                <a href="#" class="w-100 row justify-content-center mt-2">
+                    <h5>Hatchback</h5>
+                    <button class="btn btn-sm btn-danger ml-2">2 offers</button>
+                </a>
+            </li>
+            <li style="background-image: url(https://smartdata.tonytemplates.com/caleader/wp-content/uploads/2018/10/media02-img-01.jpg);">
+                <a href="#" class="w-100 row justify-content-center mt-2">
+                    <h5>Sedan</h5>
+                    <button class="btn btn-sm btn-danger ml-2">2 offers</button>
+                </a>
+            </li>
+            <li style="background-image: url(https://smartdata.tonytemplates.com/caleader/wp-content/uploads/2018/10/media02-img-04.jpg);">
+                <a href="#" class="w-100 row justify-content-center mt-2">
+                    <h5>SUV</h5>
+                    <button class="btn btn-sm btn-danger ml-2">2 offers</button>
+                </a>
+            </li>
+            <li style="background-image: url(https://smartdata.tonytemplates.com/caleader/wp-content/uploads/2018/10/media02-img-05.jpg);">
+                <a href="#" class="w-100 row justify-content-center mt-2">
+                    <h5>Pickup</h5>
+                    <button class="btn btn-sm btn-danger ml-2">2 offers</button>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer id="footer"></footer>
+    <script src="src/scripts/bootstrap.min.js"></script>
+    <script src="src/scripts/scripts.js"></script>
+
+    <!-- <i class="fas fa-car"></i> -->
+</body>
+</html>
